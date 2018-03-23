@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UserControl.h"
 
-@interface LoginServer : NSObject
 
+typedef void (^Myblock) (void);
+@interface LoginServer : UserControl
+//选择操作方式
+-(void)doChoice;
 @end

@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "UserInfo.h"
 #import "UserControl.h"
+#import "LoginServer.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        UserControl *user = [[UserControl alloc]init];
+        LoginServer *user = [[LoginServer alloc]init];
         UserInfo *user2 = [[UserInfo alloc]init];
+//        [user doChoice];
         [user registerMethod];
-//        [user loginMethod];
         
 //        NSLog(@"%hhd",[user2 UserValidation:@"li" :@"123"]);
     }

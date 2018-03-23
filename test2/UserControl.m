@@ -21,34 +21,7 @@
     return self;
 }
 
-//选择登录或注册操作方法
--(void)doChoice{
-    NSLog(@"*****************IOS学习系统登录界面****************");
-    //         使用一个缓冲区
-    char str[1000];
-    //         读取控制台的输入信息
-    NSLog(@"\n是否登录：\n1、登录。\n2、不登录。\n3、注册。");
-    scanf("%s",str);
-    // 接收控制台输入信息（这里是以接收输入的序号为例）
-    NSString * flag = [NSString stringWithUTF8String:str];
-    int num = [flag intValue];
-    switch (num) {
-        case 1:
-//            登录
-            [self loginMethod];
-            break;
-        case 2:
-//            不登录
-            break;
-        case 3:
-            [self registerMethod];
-        default:
-            NSLog(@"输入有误，请重新输入");
-            [self doChoice];
-            break;
-    }
-    
-}
+
 
 //登录方法
 -(void)loginMethod{
@@ -91,6 +64,7 @@
 //    把账号密码传给user字典
     [_user userDic:name :pw];
 //    调用选择操作方法
-    [self doChoice];
+//    [LoginServer doChoice];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"choice" object:nil];
 }
 @end
