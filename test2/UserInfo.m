@@ -19,6 +19,7 @@
 //    保存账号密码
     _username = [_user objectForKey:@"name"];
     _passwd = [_user objectForKey:@"passwd"];
+    NSLog(@"\n注册成功");
 
 }
 
@@ -27,11 +28,9 @@
         
     if(newname == _username && newpasswd == _passwd){
         //登录成功
-//        Myblock(@"登录成功");
         return YES;
     }else{
 //        登录失败
-//        Myblock(@"登录失败");
         return NO;
     }
     

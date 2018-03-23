@@ -12,6 +12,8 @@
 @interface UserControl : NSObject{
     UserInfo *_user;
 }
+//选择操作方式
+-(void)doChoice;
 //登录方法
 -(void)registerMethod;
 //注册方法

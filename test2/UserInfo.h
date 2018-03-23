@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-typedef void (^Myblock) (NSString *name);
+//typedef void (^Myblock) (NSString *name);
 
 @interface UserInfo : NSObject
 //存储用户信息
