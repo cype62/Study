@@ -7,7 +7,16 @@
 //
 
 #import "UserControl.h"
+#import "UserInfo.h"
 
 @implementation UserControl
+-(void)loginMethod{
+    
+}
 
+-(void)registerMethod{
+    UserInfo *user = [[UserInfo alloc]init];
+    [user userDic:@"li" :@"123"];
+    
+}
 @end

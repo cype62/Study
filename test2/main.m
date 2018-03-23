@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "UserInfo.h"
+#import "UserControl.h"
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        UserInfo *user = [[UserInfo alloc]init];
-        [user userDic];
+        UserControl *user = [[UserControl alloc]init];
+        UserInfo *user2 = [[UserInfo alloc]init];
+        [user registerMethod];
         
-        NSLog(@"%hhd",[user UserValidation:@"li" :@"1233"]);
+        NSLog(@"%hhd",[user2 UserValidation:@"li" :@"123"]);
     }
     return 0;
 }

@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface UserControl : NSObject
-
+//登录方法
+-(void)registerMethod;
+//注册方法
+-(void)loginMethod;
 @end

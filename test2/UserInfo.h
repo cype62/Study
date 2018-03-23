@@ -17,6 +17,8 @@
 @property(nonatomic,strong) NSString* passwd;
 
 //用户字典
--(void)userDic;
+-(void)userDic:(NSString *)newname :(NSString *)newpasswd ;
+
+//用户验证接口
 -(BOOL)UserValidation:(NSString *)newname :(NSString *)newpasswd;
 @end

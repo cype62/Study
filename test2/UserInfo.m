@@ -9,15 +9,16 @@
 #import "UserInfo.h"
 
 @implementation UserInfo
--(void)userDic{
+-(void)userDic:(NSString *)newname :(NSString *)newpasswd {
     _user = [[NSMutableDictionary alloc]init];
 //    接受注册的账号密码
-    [_user setObject:@"li" forKey:@"name"];
-    [_user setObject:@"123" forKey:@"passwd"];
+    [_user setObject:newname forKey:@"name"];
+    [_user setObject:newpasswd forKey:@"passwd"];
     NSLog(@"%@",_user.allValues);
 //    保存账号密码
     _username = [_user objectForKey:@"name"];
     _passwd = [_user objectForKey:@"passwd"];
+    
 }
 
 //用户验证接口
