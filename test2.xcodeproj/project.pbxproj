@@ -70,14 +70,14 @@
 			isa = PBXGroup;
 			children = (
 				B27668722065073600E9AECE /* main.m */,
-				B2766882206509C300E9AECE /* StudyServer.h */,
-				B2766883206509C300E9AECE /* StudyServer.m */,
-				B276687F2065098800E9AECE /* LoginServer.h */,
-				B27668802065098800E9AECE /* LoginServer.m */,
-				B276687C2065097100E9AECE /* UserControl.h */,
-				B276687D2065097100E9AECE /* UserControl.m */,
 				B27668792065094D00E9AECE /* UserInfo.h */,
 				B276687A2065094D00E9AECE /* UserInfo.m */,
+				B276687C2065097100E9AECE /* UserControl.h */,
+				B276687D2065097100E9AECE /* UserControl.m */,
+				B276687F2065098800E9AECE /* LoginServer.h */,
+				B27668802065098800E9AECE /* LoginServer.m */,
+				B2766882206509C300E9AECE /* StudyServer.h */,
+				B2766883206509C300E9AECE /* StudyServer.m */,
 			);
 			path = test2;
 			sourceTree = "<group>";
