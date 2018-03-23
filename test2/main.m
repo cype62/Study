@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "UserInfo.h"
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        UserInfo *user = [[UserInfo alloc]init];
+        [user userDic];
+        
+        NSLog(@"%hhd",[user UserValidation:@"li" :@"1233"]);
     }
     return 0;
 }
