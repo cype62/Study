@@ -15,8 +15,9 @@ int main(int argc, const char * argv[]) {
         UserControl *user = [[UserControl alloc]init];
         UserInfo *user2 = [[UserInfo alloc]init];
         [user registerMethod];
+//        [user loginMethod];
         
-        NSLog(@"%hhd",[user2 UserValidation:@"li" :@"123"]);
+//        NSLog(@"%hhd",[user2 UserValidation:@"li" :@"123"]);
     }
     return 0;
 }

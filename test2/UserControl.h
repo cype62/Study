@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UserInfo.h"
 
-@interface UserControl : NSObject
+@interface UserControl : NSObject{
+    UserInfo *_user;
+}
 //登录方法
 -(void)registerMethod;
 //注册方法

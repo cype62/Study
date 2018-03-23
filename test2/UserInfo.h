@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+
+typedef void (^Myblock) (NSString *name);
+
 @interface UserInfo : NSObject
 //存储用户信息
 @property(nonatomic,strong) NSMutableDictionary* user;
@@ -17,8 +20,8 @@
 @property(nonatomic,strong) NSString* passwd;
 
 //用户字典
--(void)userDic:(NSString *)newname :(NSString *)newpasswd ;
+-(void)userDic:(NSString *)newname :(NSString *)newpasswd;
 
 //用户验证接口
--(BOOL)UserValidation:(NSString *)newname :(NSString *)newpasswd;
+-(BOOL)UserValidation:(NSString *)newname :(NSString *)newpasswd ;
 @end

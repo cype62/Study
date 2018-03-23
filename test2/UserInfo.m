@@ -7,6 +7,7 @@
 //
 
 #import "UserInfo.h"
+//#import "UserControl.h"
 
 @implementation UserInfo
 -(void)userDic:(NSString *)newname :(NSString *)newpasswd {
@@ -18,16 +19,19 @@
 //    保存账号密码
     _username = [_user objectForKey:@"name"];
     _passwd = [_user objectForKey:@"passwd"];
-    
+
 }
 
 //用户验证接口
--(BOOL)UserValidation:(NSString *)newname :(NSString *)newpasswd{
+-(BOOL)UserValidation:(NSString *)newname :(NSString *)newpasswd {
+        
     if(newname == _username && newpasswd == _passwd){
         //登录成功
+//        Myblock(@"登录成功");
         return YES;
     }else{
 //        登录失败
+//        Myblock(@"登录失败");
         return NO;
     }
     
