@@ -72,16 +72,20 @@
     // 接收控制台输入信息（这里是以接收输入的序号为例）
     NSString * flag = [NSString stringWithUTF8String:str];
     int num = [flag intValue];
-    for (NSString *item in arr) {
-        if(num == [arr indexOfObject:item]){
-            NSLog(@"观看iOS学习视频中...");
-        }else{
-            NSLog(@"您查找的视频不存在");
-        
+    if(arr.count != 0){
+        for (NSString *item in arr) {
+            if(num == [arr indexOfObject:item]){
+                NSLog(@"观看iOS学习视频中...");
+            }else{
+                NSLog(@"您查找的视频不存在");
+            }
         }
+    }else{
+        NSLog(@"您查找的视频不存在");
     }
-    
 }
+
+
 //添加一个新的iOS视频
 -(void)addVedio{
     //         使用一个缓冲区
