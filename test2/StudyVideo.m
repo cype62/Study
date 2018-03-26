@@ -72,9 +72,10 @@
     // 接收控制台输入信息（这里是以接收输入的序号为例）
     NSString * flag = [NSString stringWithUTF8String:str];
     int num = [flag intValue];
+//    判断视频是否存在
     if(arr.count != 0){
         for (NSString *item in arr) {
-            if(num == [arr indexOfObject:item]){
+            if(num-1 == [arr indexOfObject:item]){
                 NSLog(@"观看iOS学习视频中...");
             }else{
                 NSLog(@"您查找的视频不存在");
@@ -95,7 +96,8 @@
     scanf("%s",str);
     // 接收控制台输入信息（这里是以接收输入的序号为例）
     NSString * flag = [NSString stringWithUTF8String:str];
-    [arr arrayByAddingObject:flag];
+    [arr addObject:flag];
+    [self actionChoice];
 }
 //删除某一iOS视频
 -(void)delVedioByID{
