@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StudyServer : NSObject
 
+@interface StudyServer : NSObject
+//查看所有ios视频
+-(void)studyVideo;
 //选择操作内容
 -(void)choiceStudy;
 @end
+

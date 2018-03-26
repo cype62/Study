@@ -7,10 +7,12 @@
 //
 
 #import "StudyServer.h"
+#import "StudyVideo.h"
 
 @implementation StudyServer
 
 -(void)choiceStudy{
+    StudyVideo *video = [[StudyVideo alloc]init];
     NSLog(@"*****************IOS学习系统登录界面****************");
     //         使用一个缓冲区
     char str[1000];
@@ -24,6 +26,8 @@
     switch (num) {
         case 1:
 //            1是观看iOS学习视频
+            
+            [video allVedio];
             break;
         case 2:
 //            2是下载iOS学习视频
@@ -38,7 +42,7 @@
 
 //1是观看iOS学习视频
 -(void)studyVideo{
-    
+
 }
 
 //2是下载iOS学习视频

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6ADAE9F120661F1000940A82 /* StudyVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADAE9F020661F1000940A82 /* StudyVideo.m */; };
 		B27668732065073600E9AECE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B27668722065073600E9AECE /* main.m */; };
 		B276687B2065094D00E9AECE /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B276687A2065094D00E9AECE /* UserInfo.m */; };
 		B276687E2065097100E9AECE /* UserControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B276687D2065097100E9AECE /* UserControl.m */; };
 		B27668812065098800E9AECE /* LoginServer.m in Sources */ = {isa = PBXBuildFile; fileRef = B27668802065098800E9AECE /* LoginServer.m */; };
 		B2766884206509C300E9AECE /* StudyServer.m in Sources */ = {isa = PBXBuildFile; fileRef = B2766883206509C300E9AECE /* StudyServer.m */; };
+		B27668872068C11400E9AECE /* StudyVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = B27668862068C11400E9AECE /* StudyVideo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,8 +28,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6ADAE9EF20661F1000940A82 /* StudyVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyVideo.h; sourceTree = "<group>"; };
-		6ADAE9F020661F1000940A82 /* StudyVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyVideo.m; sourceTree = "<group>"; };
 		B276686F2065073600E9AECE /* test2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test2; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27668722065073600E9AECE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B27668792065094D00E9AECE /* UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
@@ -40,6 +38,8 @@
 		B27668802065098800E9AECE /* LoginServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginServer.m; sourceTree = "<group>"; };
 		B2766882206509C300E9AECE /* StudyServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyServer.h; sourceTree = "<group>"; };
 		B2766883206509C300E9AECE /* StudyServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyServer.m; sourceTree = "<group>"; };
+		B27668852068C11400E9AECE /* StudyVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyVideo.h; sourceTree = "<group>"; };
+		B27668862068C11400E9AECE /* StudyVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyVideo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +81,8 @@
 				B27668802065098800E9AECE /* LoginServer.m */,
 				B2766882206509C300E9AECE /* StudyServer.h */,
 				B2766883206509C300E9AECE /* StudyServer.m */,
-				6ADAE9EF20661F1000940A82 /* StudyVideo.h */,
-				6ADAE9F020661F1000940A82 /* StudyVideo.m */,
+				B27668852068C11400E9AECE /* StudyVideo.h */,
+				B27668862068C11400E9AECE /* StudyVideo.m */,
 			);
 			path = test2;
 			sourceTree = "<group>";
@@ -145,7 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B27668812065098800E9AECE /* LoginServer.m in Sources */,
-				6ADAE9F120661F1000940A82 /* StudyVideo.m in Sources */,
+				B27668872068C11400E9AECE /* StudyVideo.m in Sources */,
 				B276687E2065097100E9AECE /* UserControl.m in Sources */,
 				B276687B2065094D00E9AECE /* UserInfo.m in Sources */,
 				B27668732065073600E9AECE /* main.m in Sources */,
