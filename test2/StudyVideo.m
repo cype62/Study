@@ -11,7 +11,19 @@
 @implementation StudyVideo
 
 //查看所有ios视频
+-(void)allVedio{
+    
+}
 //通过id选择播放某一ios视频
+-(void)playViedByID{
+    
+}
 //添加一个新的ios视频
+-(void)addVedio{
+    
+}
 //删除某一视频
+-(void)delVedioByID{
+    
+}
 @end
