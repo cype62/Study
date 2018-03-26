@@ -31,12 +31,18 @@
     switch (num) {
         case 1:
             //            登录
-            [self loginMethod];
+            if([self loginMethod]){
+                StudyServer *study = [[StudyServer alloc]init];
+                [study choiceStudy];
+            }else{
+                NSLog(@"登录异常");
+            }
             break;
         case 2:
             //            不登录
             break;
         case 3:
+//            注册
             [self registerMethod];
             break;
         default:

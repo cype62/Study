@@ -24,7 +24,7 @@
 
 
 //登录方法
--(void)loginMethod{
+-(int)loginMethod{
     
 //         使用一个缓冲区
         char buffer_name[1000];
@@ -43,6 +43,7 @@
 //            };
             BOOL result = [_user UserValidation:loginname :loginpw ];
         NSLog(@"结果是：%d",result);
+    return result;
     
 }
 

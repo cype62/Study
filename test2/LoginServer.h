@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "UserControl.h"
+#import "StudyServer.h"
 
 
 typedef void (^Myblock) (void);

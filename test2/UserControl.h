@@ -14,8 +14,8 @@
     
 }
 
-//登录方法
--(void)registerMethod;
 //注册方法
--(void)loginMethod;
+-(void)registerMethod;
+//登录方法
+-(int)loginMethod;
 @end

@@ -10,4 +10,6 @@
 
 @interface StudyServer : NSObject
 
+//选择操作内容
+-(void)choiceStudy;
 @end
