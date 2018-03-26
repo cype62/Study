@@ -9,7 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "StudyServer.h"
 
-@interface StudyVideo : NSObject
+@interface StudyVideo : NSObject{
+    NSMutableArray *arr;
+}
+
+//视频操作方法
+-(void)actionChoice;
 //查看所有ios视频
 -(void)allVedio;
 @end
