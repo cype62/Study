@@ -15,8 +15,8 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         LoginServer *user = [[LoginServer alloc]init];
-        UserInfo *user2 = [[UserInfo alloc]init];
-        StudyVideo *video = [[StudyVideo alloc]init];
+//        UserInfo *user2 = [[UserInfo alloc]init];
+//        StudyVideo *video = [[StudyVideo alloc]init];
         
 //        [user doChoice];
         [user registerMethod];

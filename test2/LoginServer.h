@@ -11,7 +11,6 @@
 #import "StudyServer.h"
 
 
-typedef void (^Myblock) (void);
 @interface LoginServer : UserControl
 //选择操作方式
 -(void)doChoice;

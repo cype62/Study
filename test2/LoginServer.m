@@ -23,7 +23,7 @@
     //         使用一个缓冲区
     char str[1000];
     //         读取控制台的输入信息
-    NSLog(@"\n是否登录：\n1、登录。\n2、不登录。\n3、注册。");
+    NSLog(@"\n是否登录：\n1、登录。\n2、不登录。\n3、注册。\n");
     scanf("%s",str);
     // 接收控制台输入信息（这里是以接收输入的序号为例）
     NSString * flag = [NSString stringWithUTF8String:str];
@@ -35,7 +35,8 @@
                 StudyServer *study = [[StudyServer alloc]init];
                 [study choiceStudy];
             }else{
-                NSLog(@"登录异常");
+                NSLog(@"请重新登录。\n");
+                [self doChoice];
             }
             break;
         case 2:

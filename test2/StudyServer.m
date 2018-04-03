@@ -7,7 +7,6 @@
 //
 
 #import "StudyServer.h"
-#import "StudyVideo.h"
 
 @implementation StudyServer
 
@@ -16,7 +15,7 @@
     //         使用一个缓冲区
     char str[1000];
     //         读取控制台的输入信息
-    NSLog(@"\n请选择：\n1是观看iOS学习视频。\n2是下载iOS学习视频。\n3是直接退出学习系统。");
+    NSLog(@"\n请选择：\n1是观看iOS学习视频。\n2是下载iOS学习视频。\n3是直接退出学习系统。\n");
     scanf("%s",str);
     // 接收控制台输入信息（这里是以接收输入的序号为例）
     NSString * flag = [NSString stringWithUTF8String:str];

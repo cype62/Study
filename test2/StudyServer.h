@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "StudyVideo.h"
 
 @interface StudyServer : NSObject
 //查看所有ios视频

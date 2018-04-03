@@ -27,22 +27,26 @@
 -(int)loginMethod{
     
 //         使用一个缓冲区
-        char buffer_name[1000];
-        char buffer_pw[1000];
+    char buffer_name[1000];
+    char buffer_pw[1000];
 //         读取控制台的输入信息
-        NSLog(@"请录入帐号：");
-        scanf("%s",buffer_name);
-        NSLog(@"\n请录入密码：");
-        scanf("%s",buffer_pw);
+    NSLog(@"请输入帐号：");
+    scanf("%s",buffer_name);
+    NSLog(@"请输入密码：");
+    scanf("%s",buffer_pw);
 //        接收控制台输入信息（这里是以接收输入的序号为例）
-        __block NSString *loginname = [NSString stringWithUTF8String:buffer_name];
-        __block NSString *loginpw = [NSString stringWithUTF8String:buffer_pw];
+    __block NSString *loginname = [NSString stringWithUTF8String:buffer_name];
+    __block NSString *loginpw = [NSString stringWithUTF8String:buffer_pw];
     
 //        Myblock b1 = ^(NSString *log){
 //            NSLog(@"%@",log);
 //            };
-            BOOL result = [_user UserValidation:loginname :loginpw ];
-        NSLog(@"结果是：%d",result);
+    BOOL result = [_user UserValidation:loginname :loginpw ];
+    if(result){
+        NSLog(@"登录成功！\n");
+    }else{
+        NSLog(@"登录失败!\n");
+    }
     return result;
     
 }
@@ -54,7 +58,7 @@
     char buffer_name[1000];
     char buffer_pw[1000];
 //     读取控制台的输入信息
-    NSLog(@"请输入注册用户名：");
+    NSLog(@"\n请输入注册用户名：");
     scanf("%s",buffer_name);
     NSLog(@"\n请输入注册密码：");
     scanf("%s",buffer_pw);

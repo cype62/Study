@@ -28,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A50422A2073B67B003DFF12 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = test2/PrefixHeader.pch; sourceTree = "<group>"; };
 		B276686F2065073600E9AECE /* test2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test2; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27668722065073600E9AECE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B27668792065094D00E9AECE /* UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		B27668662065073600E9AECE = {
 			isa = PBXGroup;
 			children = (
+				6A50422A2073B67B003DFF12 /* PrefixHeader.pch */,
 				B27668712065073600E9AECE /* test2 */,
 				B27668702065073600E9AECE /* Products */,
 			);
@@ -264,6 +266,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DWY2W2N8RG;
+				EXECUTABLE_PREFIX = "";
+				GCC_PREFIX_HEADER = /Users/tcsoft/Documents/workspace/Study/test2/PrefixHeader.pch;
+				INFOPLIST_PREFIX_HEADER = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -273,6 +278,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DWY2W2N8RG;
+				EXECUTABLE_PREFIX = "";
+				GCC_PREFIX_HEADER = /Users/tcsoft/Documents/workspace/Study/test2/PrefixHeader.pch;
+				INFOPLIST_PREFIX_HEADER = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
