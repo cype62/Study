@@ -22,7 +22,7 @@
 -(void)actionChoice{
     
     NSLog(@"\n请输入要选择的功能：");
-    int num = [putNum(@"\n1 查看所有iOS视频\n2 通过id选择播放某一iOS视频\n3 添加一个新的iOS视频\n4 删除某一iOS视频\n5 返回") intValue];
+    int num = [putNum(@"\n1 查看所有iOS视频\n2 通过id选择播放某一iOS视频\n3 添加一个新的iOS视频\n4 删除某一iOS视频\n5 返回\n") intValue];
     
     switch (num) {
         case 1:
@@ -38,7 +38,7 @@
             [self delVedioByID];
             break;
         case 5:
-            [self delVedioByID];
+            [self backStudyServer];
             break;
         default:
             NSLog(@"\n输入有误，请重新输入");
@@ -88,6 +88,7 @@
 //    返回
     [self actionChoice];
 }
+
 //删除某一iOS视频
 -(void)delVedioByID{
     int num = [putNum(@"请输入要删除的视频ID：\n") intValue]-1;
@@ -101,6 +102,12 @@
     
     [self actionChoice];
 }
+
+//委托：返回上一层（choiceStudy）
+-(void)backStudyServer{
+    [self.Delegate choiceStudy];
+}
+
 
 NSString* putNum(NSString *con){
     //         使用一个缓冲区

@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "StudyVideo.h"
 
-@interface StudyServer : NSObject
-//查看所有ios视频
--(void)studyVideo;
+@interface StudyServer : NSObject<DoChoiceDelegate>
+
 //选择操作内容
 -(void)choiceStudy;
 @end
+
 

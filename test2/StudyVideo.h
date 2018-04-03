@@ -7,14 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "StudyServer.h"
 
+@protocol DoChoiceDelegate;
 @interface StudyVideo : NSObject{
     NSMutableArray *arr;
 }
-
+@property(nonatomic,weak) id<DoChoiceDelegate> Delegate;
+//返回选择登录后的操作
+-(void)backStudyServer;
 //视频操作方法
 -(void)actionChoice;
 //查看所有ios视频
 -(void)allVedio;
+@end
+
+@protocol DoChoiceDelegate <NSObject>
+
+@optional
+-(void)choiceStudy;
+
 @end

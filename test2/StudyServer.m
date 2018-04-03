@@ -10,6 +10,7 @@
 
 @implementation StudyServer
 
+
 -(void)choiceStudy{
     NSLog(@"*****************IOS学习系统登录界面****************");
     //         使用一个缓冲区
@@ -23,6 +24,7 @@
     
     StudyVideo *video = [[StudyVideo alloc]init];
     
+    
     switch (num) {
         case 1:
 //            1是观看iOS学习视频
@@ -31,30 +33,18 @@
             break;
         case 2:
 //            2是下载iOS学习视频
-            [[NSNotificationCenter defaultCenter]postNotificationName:@"actionChoice" object:nil];
+            NSLog(@"正在下载学习资源中……");
+            [self choiceStudy];
             break;
         case 3:
 //            3是直接退出学习系统
-            [[NSNotificationCenter defaultCenter]postNotificationName:@"actionChoice" object:nil];
             break;
         default:
             break;
     }
-}
-
-//1是观看iOS学习视频
--(void)studyVideo{
-
-}
-
-//2是下载iOS学习视频
--(void)downLoanVideo{
-    
-}
-
-//3是直接退出学习系统
--(void)checkOut{
-    
+//    委托操作
+    video.Delegate = self;
+    [video backStudyServer];
 }
 
 
