@@ -38,6 +38,7 @@
             break;
         case 3:
 //            3是直接退出学习系统
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"choice" object:nil];
             break;
         default:
             break;

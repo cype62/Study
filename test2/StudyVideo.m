@@ -49,7 +49,7 @@
 
 //查看所有iOS视频
 -(void)allVedio{
-    
+    NSLog(@"\n资源文件有：");
     for (NSString *item in arr) {
         NSLog(@"%@\n",item);
     }
