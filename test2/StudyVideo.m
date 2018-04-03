@@ -22,7 +22,7 @@
 -(void)actionChoice{
     
     NSLog(@"\n请输入要选择的功能：");
-    int num = [putNum(@"\n1 查看所有iOS视频\n2 通过id选择播放某一iOS视频\n3 添加一个新的iOS视频\n4 删除某一iOS视频") intValue];
+    int num = [putNum(@"\n1 查看所有iOS视频\n2 通过id选择播放某一iOS视频\n3 添加一个新的iOS视频\n4 删除某一iOS视频\n5 返回") intValue];
     
     switch (num) {
         case 1:
@@ -37,8 +37,11 @@
         case 4:
             [self delVedioByID];
             break;
+        case 5:
+            [self delVedioByID];
+            break;
         default:
-            NSLog(@"输入有误，请重新输入");
+            NSLog(@"\n输入有误，请重新输入");
             [self actionChoice];
             break;
     }
@@ -48,28 +51,34 @@
 -(void)allVedio{
     
     for (NSString *item in arr) {
-        NSLog(@"%@",item);
+        NSLog(@"%@\n",item);
     }
     if(arr.count == 0){
-        NSLog(@"视频为空");
+        NSLog(@"\n视频为空");
     }
-    NSLog(@"观看iOS学习视频中...");
+    NSLog(@"\n观看iOS学习视频中...");
 //    返回
     [self actionChoice];
 }
 
 //通过id选择播放某一iOS视频
 -(void)playViedByID{
-    int num = [putNum(@"\n请输入要选择观看的视频ID：") intValue]-1;
-//    判断视频是否存在
-    if(arr.count != 0 && num <= arr.count){
-        NSString *item = [arr objectAtIndex:num];
-        NSLog(@"观看iOS学习视频中...视频%@",item);
+    if(arr.count == 0){
+        NSLog(@"\n当前没有视频数据。");
+        [self actionChoice];
     }else{
-        NSLog(@"您查找的视频不存在");
+        int num = [putNum(@"\n请输入要选择观看的视频ID：") intValue]-1;
+        //    判断视频是否存在
+        if(num <= arr.count){
+            NSString *item = [arr objectAtIndex:num];
+            NSLog(@"\n观看iOS学习视频中...视频%@",item);
+        }else{
+            NSLog(@"\n您查找的视频不存在。");
+        }
+        //    返回
+        [self actionChoice];
     }
-//    返回
-    [self actionChoice];
+
 }
 
 
@@ -81,12 +90,13 @@
 }
 //删除某一iOS视频
 -(void)delVedioByID{
-    if(arr.count != 0){
-        [arr removeObjectAtIndex:[putNum(@"\n") integerValue]-1];
-        NSLog(@"删除成功！");
+    int num = [putNum(@"请输入要删除的视频ID：\n") intValue]-1;
+    if(arr.count != 0 && num <=arr.count ){
+        [arr removeObjectAtIndex:num];
+        NSLog(@"\n删除成功！");
         //    返回
     }else{
-        NSLog(@"没有视频。");
+        NSLog(@"\n没有找到该视频编号。");
     }
     
     [self actionChoice];

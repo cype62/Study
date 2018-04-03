@@ -21,6 +21,8 @@
     NSString * flag = [NSString stringWithUTF8String:str];
     int num = [flag intValue];
     
+    StudyVideo *video = [[StudyVideo alloc]init];
+    
     switch (num) {
         case 1:
 //            1是观看iOS学习视频
