@@ -15,7 +15,7 @@
 //    接受注册的账号密码
     [_user setObject:newname forKey:@"name"];
     [_user setObject:newpasswd forKey:@"passwd"];
-    NSLog(@"%@",_user.allValues);
+//    NSLog(@"%@",_user.allValues);
 //    保存账号密码
     _username = [_user objectForKey:@"name"];
     _passwd = [_user objectForKey:@"passwd"];

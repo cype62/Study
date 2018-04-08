@@ -25,7 +25,6 @@
 
 //登录方法
 -(int)loginMethod{
-    
 //         使用一个缓冲区
     char buffer_name[1000];
     char buffer_pw[1000];
@@ -53,7 +52,7 @@
 
 //注册方法
 -(void)registerMethod{
-    NSLog(@"*****************IOS学习系统登录界面****************");
+    NSLog(@"*****************IOS学习系统注册界面****************");
 //     使用一个缓冲区
     char buffer_name[1000];
     char buffer_pw[1000];
