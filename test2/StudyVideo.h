@@ -10,7 +10,7 @@
 
 @protocol DoChoiceDelegate;
 @interface StudyVideo : NSObject{
-    NSMutableArray *arr;
+    NSMutableDictionary *dic;
 }
 @property(nonatomic,weak) id<DoChoiceDelegate> Delegate;
 //返回选择登录后的操作

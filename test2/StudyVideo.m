@@ -12,7 +12,7 @@
 
 -(id)init{
     self = [super init];
-    arr = [[NSMutableArray alloc]init];
+    dic = [[NSMutableDictionary alloc]init];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(actionChoice) name:@"actionChoice" object:nil];
     
     return self;
@@ -49,31 +49,31 @@
 
 //查看所有iOS视频
 -(void)allVedio{
-    NSLog(@"\n资源文件有：");
-    for (NSString *item in arr) {
-        NSLog(@"%@\n",item);
+    if(dic.count == 0){
+        NSLog(@"\n视频为空\n");
+    }else{
+        for (NSString *item in dic) {
+            NSLog(@"视频ID：%@ 视频名称：%@\n",item,[dic objectForKey:item]);
+        }
+        NSLog(@"观看iOS学习视频中...\n");
     }
-    if(arr.count == 0){
-        NSLog(@"\n视频为空");
-    }
-    NSLog(@"\n观看iOS学习视频中...");
-//    返回
+    //    返回
     [self actionChoice];
 }
 
 //通过id选择播放某一iOS视频
 -(void)playViedByID{
-    if(arr.count == 0){
-        NSLog(@"\n当前没有视频数据。");
+    if(dic.count == 0){
+        NSLog(@"\n当前没有视频数据。\n");
         [self actionChoice];
     }else{
-        int num = [putNum(@"\n请输入要选择观看的视频ID：") intValue]-1;
+        int num = [putNum(@"\n请输入要选择观看的视频ID：") intValue];
         //    判断视频是否存在
-        if(num <= arr.count){
-            NSString *item = [arr objectAtIndex:num];
-            NSLog(@"\n观看iOS学习视频中...视频%@",item);
+        if([[dic allKeys] containsObject:[NSString stringWithFormat:@"%d",num]]){
+            NSString *item = [dic objectForKey:[NSString stringWithFormat:@"%d",num]];
+            NSLog(@"\n视频ID：%d   视频名称：%@\n",num,item);
         }else{
-            NSLog(@"\n您查找的视频不存在。");
+            NSLog(@"\n您查找的视频不存在。\n");
         }
         //    返回
         [self actionChoice];
@@ -84,20 +84,22 @@
 
 //添加一个新的iOS视频
 -(void)addVedio{
-    [arr addObject:putNum(@"\n添加一个新的ios视频")];
+    NSString *vedioName = putNum(@"\n请输入要添加的视频名称：");
+    NSString *vedioID = putNum(@"\n请请输入要添加的视频ID ID不能重复：");
+    [dic setObject:vedioName forKey:vedioID];
 //    返回
     [self actionChoice];
 }
 
 //删除某一iOS视频
 -(void)delVedioByID{
-    int num = [putNum(@"请输入要删除的视频ID：\n") intValue]-1;
-    if(arr.count != 0 && num <=arr.count ){
-        [arr removeObjectAtIndex:num];
-        NSLog(@"\n删除成功！");
+    int num = [putNum(@"请输入要删除的视频ID：\n") intValue];
+    if(dic.count != 0 && [[dic allKeys] containsObject:[NSString stringWithFormat:@"%d",num]] ){
+        [dic removeObjectForKey:[NSString stringWithFormat:@"%d",num]];
+        NSLog(@"\n删除成功！\n");
         //    返回
     }else{
-        NSLog(@"\n没有找到该视频编号。");
+        NSLog(@"\n没有找到该视频编号。\n");
     }
     
     [self actionChoice];

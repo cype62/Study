@@ -19,7 +19,7 @@
 //    保存账号密码
     _username = [_user objectForKey:@"name"];
     _passwd = [_user objectForKey:@"passwd"];
-    NSLog(@"\n注册成功");
+    NSLog(@"\n注册成功\n");
 
 }
 

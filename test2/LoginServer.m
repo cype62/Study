@@ -23,7 +23,7 @@
     //         使用一个缓冲区
     char str[1000];
     //         读取控制台的输入信息
-    NSLog(@"\n是否登录：\n1、登录。\n2、不登录。\n3、注册。\n");
+    NSLog(@"\n是否登录：\n1、登录\n2、不登录\n");
     scanf("%s",str);
     // 接收控制台输入信息（这里是以接收输入的序号为例）
     NSString * flag = [NSString stringWithUTF8String:str];
@@ -40,9 +40,6 @@
             }
             break;
         case 2:
-            //            不登录
-            break;
-        case 3:
 //            注册
             [self registerMethod];
             break;
