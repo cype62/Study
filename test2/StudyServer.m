@@ -34,13 +34,13 @@
         case 2:
 //            2是下载iOS学习视频
             NSLog(@"\n正在下载学习资源中……\n");
-            [self choiceStudy];
             break;
         case 3:
 //            3是直接退出学习系统
             [[NSNotificationCenter defaultCenter]postNotificationName:@"choice" object:nil];
             break;
         default:
+            NSLog(@"输入有误，请重新输入\n");
             break;
     }
 //    委托操作
