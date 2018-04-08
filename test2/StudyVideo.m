@@ -86,7 +86,12 @@
 -(void)addVedio{
     NSString *vedioName = putNum(@"\n请输入要添加的视频名称：");
     NSString *vedioID = putNum(@"\n请请输入要添加的视频ID ID不能重复：");
-    [dic setObject:vedioName forKey:vedioID];
+    if([[dic allKeys] containsObject:vedioID]){
+        NSLog(@"输入的视频ID有重复，请重新输入。\n");
+        [self addVedio];
+    }else{
+        [dic setObject:vedioName forKey:vedioID];
+    }
 //    返回
     [self actionChoice];
 }
